@@ -7,8 +7,8 @@ ftp = ftplib.FTP_TLS()
 ftp.set_debuglevel(2)
 
 path = "."
-username=""
-password=""
+username = "shot-bottoms"
+password = "bakabaka"
 
 def checkfiles( path ):
     print("checkfiles")
@@ -46,10 +46,11 @@ while 1:
     time.sleep(5)
     after = checkfiles( path )
     if len(before)!=len(after):
-        changedfiles.append([set(after.keys())-set(before.keys())]);
+        changedfiles.extend([set(after.keys())-set(before.keys())]);
     
     for (a, t) in before.items():
         if a in after.keys():
             if t != after[a]:
                 changedfiles.append(a)
     fileschanged(changedfiles)
+    before = after
