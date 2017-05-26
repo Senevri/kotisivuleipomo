@@ -18,7 +18,7 @@ if (!file_exists('files')) {
 
 $url = $_GET['url'];
 $fname = basename($url);
-//file_put_contents("files/$fname", fopen($url, "r"));
+file_put_contents("files/$fname", fopen($url, "r"));
  
 
 
