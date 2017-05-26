@@ -7,8 +7,8 @@ ftp = ftplib.FTP_TLS()
 ftp.set_debuglevel(2)
 
 path = "."
-username = "shot-bottoms"
-password = "bakabaka"
+username = "username"
+password = "password"
 
 def checkfiles( path ):
     print("checkfiles")
